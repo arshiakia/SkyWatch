@@ -1,6 +1,6 @@
 # SkyWatch
 
-# EasyCalc
+# کد پایتون
 ```
 import requests
 from datetime import datetime
@@ -59,11 +59,13 @@ if __name__ == "__main__":
     city_name = input("Please enter your city name: ")
     get_weather(city_name, api_key)
 ```
+# کلون کردن پروژه skywatch 
 
-همچنین میتوانید با نصب برنامه گیت پروژه را در کامپیوتر خود کلون کنید.
+همچنین میتوانید با نصب برنامه گیت  پروژه را در کامپیوتر خود کلون کنید.
 
-ا1_بتدا مطمعن شوید برنامه git روی لپتاپ شما نصب است. ( [وبسایت رسمی](https://git-scm.com/downloads)  )
-2_ سپس محیط cmd کامپیوتر را باز کنید و دستورات زیر را بنویسید.
+1_ابتدا مطمعن شوید برنامه git روی لپتاپ شما نصب است. ( [وبسایت رسمی](https://git-scm.com/downloads)  )
+
+2_ سپس محیط cmd کامپیوتر را باز کنید و دستورات زیر را بنویسید تا پروژه کلون شود.
 ```
 git clone https://github.com/arshiakia/SkyWatch.git
 ```
@@ -84,37 +86,23 @@ python test_install_libery.py
 ```
 python SkyWatch.main.py
 ```
+# توضیحات برنامه
 
-توضیح ماشین حساب ( EasyCalc )
- 
-این ماشین حساب ساده با استفاده از زبان برنامه‌نویسی پایتون طراحی شده است تا کاربران بتوانند به راحتی محاسبات ریاضی خود را انجام دهند. این برنامه به‌طور ویژه برای کاربرانی که به دنبال ابزاری سریع و کارآمد برای انجام عملیات پایه‌ای ریاضی هستند، مناسب است. 
+این برنامه یک ابزار پایتون برای دریافت اطلاعات آب و هوایی از یک شهر است که با استفاده از وب‌سایت OpenWeatherMap کار می‌کند.
 
-ویژگی‌های کلیدی ماشین حساب:
+این برنامه به کاربر اجازه می‌دهد تا با وارد کردن نام یک شهر، اطلاعات مربوط به وضعیت آب و هوای آن را دریافت کند.
+داده‌های آب و هوایی از API OpenWeatherMap دریافت می‌شوند که شامل اطلاعاتی مانند**دما ، رطوبت ، فشار ، سرعت باد ، و زمان طلوع و غروب خورشید** است.
 
-1. عملیات پایه: ماشین حساب قابلیت انجام چهار عمل اصلی ریاضی: جمع، تفریق، ضرب و تقسیم را دارد. کاربران می‌توانند با وارد کردن دو عدد و انتخاب نوع عمل، نتیجه را به سرعت دریافت کنند.
+# اطلاعات ارائه شده :
 
-2. راحتی در استفاده: این برنامه به گونه‌ای طراحی شده است که کاربر به سادگی می‌تواند گزینه مورد نظر خود را انتخاب کند و وارد کردن اعداد نیز به سادگی انجام می‌شود. 
+   - دما (درجه سانتی‌گراد)
+   - دمای احساس شده (درجه سانتی‌گراد)
+   - رطوبت (%)
+   - فشار (هکتوپاسکال)
+   - توضیحات وضعیت آب و هوا (مثلاً آفتابی، بارانی و غیره)
+   - سرعت باد (متر بر ثانیه)
+   - زمان طلوع و غروب خورشید (به فرمت ساعت)
 
-3. مدیریت خطا: یکی از ویژگی‌های مهم این ماشین حساب، مدیریت خطاهاست. به‌عنوان مثال، در صورت تلاش برای تقسیم بر صفر، برنامه پیام مناسب را به کاربر نمایش می‌دهد.
-
-4. قابلیت خروج: برنامه به کاربران این امکان را می‌دهد که با وارد کردن کلمه «exit» از برنامه خارج شوند. این ویژگی تجربه کاربری را بهبود می‌بخشد و از گیج شدن کاربر جلوگیری می‌کند.
-
-
-
-
-
-Calculator Description
-
-This simple calculator has been designed using the Python programming language to allow users to easily perform their mathematical calculations. This program is particularly suitable for users seeking a quick and efficient tool for basic arithmetic operations.
-
-Key Features of the Calculator:
-
-1. Basic Operations: The calculator is capable of performing four main arithmetic operations: addition, subtraction, multiplication, and division. Users can quickly obtain results by entering two numbers and selecting the desired operation.
-
-2. Ease of Use: The program is designed in such a way that users can easily select their desired option and input numbers without complications.
-
-3. Error Handling: One of the important features of this calculator is its error management. For example, if a user attempts to divide by zero, the program displays an appropriate message to the user.
-
-4. Exit Capability: The program allows users to exit by entering the command "exit." This feature enhances the user experience and prevents confusion.
-
+تبدیل واحدها :
+برنامه به کاربر این امکان را می‌دهد که در صورت تمایل ، **دما را به فارنهایت** و **سرعت باد را به کیلومتر بر ساعت** تبدیل کند.
 
