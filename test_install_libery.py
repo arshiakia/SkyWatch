@@ -1,6 +1,6 @@
 import requests
 import http.client
 import urllib
-print("کتابخانه requests با موفقیت نصب شده است!")
+print(" OK ")
 
 # arshia_kiakazemi
