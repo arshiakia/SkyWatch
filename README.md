@@ -1,7 +1,6 @@
 # SkyWatch
 
 # Program Description
-# توضیحات برنامه
 
 این برنامه یک ابزار پایتون برای دریافت اطلاعات آب و هوایی از یک شهر است که با استفاده از وب‌سایت OpenWeatherMap کار می‌کند.
 
@@ -23,7 +22,6 @@
 
 ---
 
-# Program Description
 
 This program is a Python tool for obtaining weather information from a city using the OpenWeatherMap website.
 
