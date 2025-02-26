@@ -1,6 +1,48 @@
 # SkyWatch
 
-# کد پایتون
+# Program Description
+# توضیحات برنامه
+
+این برنامه یک ابزار پایتون برای دریافت اطلاعات آب و هوایی از یک شهر است که با استفاده از وب‌سایت OpenWeatherMap کار می‌کند.
+
+این برنامه به کاربر اجازه می‌دهد تا با وارد کردن نام یک شهر، اطلاعات مربوط به وضعیت آب و هوای آن را دریافت کند.
+داده‌های آب و هوایی از API OpenWeatherMap دریافت می‌شوند که شامل اطلاعاتی مانند**دما ، رطوبت ، فشار ، سرعت باد ، و زمان طلوع و غروب خورشید** است.
+
+# اطلاعات ارائه شده :
+
+   - دما (درجه سانتی‌گراد)
+   - دمای احساس شده (درجه سانتی‌گراد)
+   - رطوبت (%)
+   - فشار (هکتوپاسکال)
+   - توضیحات وضعیت آب و هوا (مثلاً آفتابی، بارانی و غیره)
+   - سرعت باد (متر بر ثانیه)
+   - زمان طلوع و غروب خورشید (به فرمت ساعت)
+
+تبدیل واحدها :
+برنامه به کاربر این امکان را می‌دهد که در صورت تمایل ، **دما را به فارنهایت** و **سرعت باد را به کیلومتر بر ساعت** تبدیل کند.
+
+---
+
+# Program Description
+
+This program is a Python tool for obtaining weather information from a city using the OpenWeatherMap website.
+
+This program allows the user to enter the name of a city and receive information about the current weather conditions there. Weather data is retrieved from the OpenWeatherMap API and includes information such as **temperature, humidity, pressure, wind speed, and sunrise and sunset times**.
+
+# Provided Information:
+
+- Temperature (in degrees Celsius)
+- Feels like temperature (in degrees Celsius)
+- Humidity (%)
+- Pressure (hPa)
+- Weather condition description (e.g., sunny, rainy, etc.)
+- Wind speed (meters per second)
+- Sunrise and sunset times (in hour format)
+
+Unit Conversion:
+The program gives the user the option to convert **temperature to Fahrenheit** and **wind speed to kilometers per hour** if desired.
+
+# python code
 ```
 import requests
 from datetime import datetime
@@ -86,23 +128,4 @@ python test_install_libery.py
 ```
 python SkyWatch.main.py
 ```
-# توضیحات برنامه
-
-این برنامه یک ابزار پایتون برای دریافت اطلاعات آب و هوایی از یک شهر است که با استفاده از وب‌سایت OpenWeatherMap کار می‌کند.
-
-این برنامه به کاربر اجازه می‌دهد تا با وارد کردن نام یک شهر، اطلاعات مربوط به وضعیت آب و هوای آن را دریافت کند.
-داده‌های آب و هوایی از API OpenWeatherMap دریافت می‌شوند که شامل اطلاعاتی مانند**دما ، رطوبت ، فشار ، سرعت باد ، و زمان طلوع و غروب خورشید** است.
-
-# اطلاعات ارائه شده :
-
-   - دما (درجه سانتی‌گراد)
-   - دمای احساس شده (درجه سانتی‌گراد)
-   - رطوبت (%)
-   - فشار (هکتوپاسکال)
-   - توضیحات وضعیت آب و هوا (مثلاً آفتابی، بارانی و غیره)
-   - سرعت باد (متر بر ثانیه)
-   - زمان طلوع و غروب خورشید (به فرمت ساعت)
-
-تبدیل واحدها :
-برنامه به کاربر این امکان را می‌دهد که در صورت تمایل ، **دما را به فارنهایت** و **سرعت باد را به کیلومتر بر ساعت** تبدیل کند.
 
