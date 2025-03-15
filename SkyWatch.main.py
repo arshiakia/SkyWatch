@@ -51,7 +51,7 @@ def convert_units(temp_c, wind_speed_mps):
 
 
 if __name__ == "__main__":
-    api_key = "9223600940f768c665c5a16a81bb6d56"
+    api_key = "461fc1ff3a0923d864d6a3305f0b78f4"
     city_name = input("Please enter your city name: ")
     get_weather(city_name, api_key)
 
