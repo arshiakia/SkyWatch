@@ -1,5 +1,13 @@
+import os
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
+
+# بارگذاری متغیرها از فایل .env
+load_dotenv()
+
+# دریافت کلید API از فایل .env
+api_key = os.getenv("API_KEY")
 
 def get_weather(city_name, api_key):
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -51,10 +59,5 @@ def convert_units(temp_c, wind_speed_mps):
 
 
 if __name__ == "__main__":
-    api_key = "461fc1ff3a0923d864d6a3305f0b78f4"
     city_name = input("Please enter your city name: ")
-    get_weather(city_name, api_key)
-
-
-
-    #arshia_kiakazemi
+    get_weather(city_name, api_key)  
