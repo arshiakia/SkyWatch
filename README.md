@@ -47,10 +47,8 @@ import requests
 from datetime import datetime
 from dotenv import load_dotenv
 
-# بارگذاری متغیرها از فایل .env
 load_dotenv()
 
-# دریافت کلید API از فایل .env
 api_key = os.getenv("API_KEY")
 
 def get_weather(city_name, api_key):
