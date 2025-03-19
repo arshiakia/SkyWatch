@@ -48,17 +48,29 @@ This program allows the user to enter the name of a city and receive information
 # Provided Information:
 
 1_City Name
+
 2_Temperature
+
 3_Feels Like
+
 4_Humidity
+
 5_Pressure
+
 6_Weather Description
+
 7_Cloudiness
+
 8_Wind Speed
+
 9_Visibility
+
 10_Sunrise
+
 11_Sunset
+
 12_Rain 
+
 13_Snow
 
 Unit Conversion:
