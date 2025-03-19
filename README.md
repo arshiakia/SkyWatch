@@ -9,13 +9,19 @@
 
 # اطلاعات ارائه شده :
 
-   - دما (درجه سانتی‌گراد)
-   - دمای احساس شده (درجه سانتی‌گراد)
-   - رطوبت (%)
-   - فشار (هکتوپاسکال)
-   - توضیحات وضعیت آب و هوا (مثلاً آفتابی، بارانی و غیره)
-   - سرعت باد (متر بر ثانیه)
-   - زمان طلوع و غروب خورشید (به فرمت ساعت)
+1_نام شهر
+2_دما
+3_دمای احساس شده
+4_رطوبت
+5_فشار هوا
+6_توضیحات وضعیت آب و هوا
+7_میزان ابری بودن
+8_سرعت باد
+9_دید افقی
+10_زمان طلوع خورشید
+11_زمان غروب خورشید
+12_بارش 
+13_برف
 
 تبدیل واحدها :
 برنامه به کاربر این امکان را می‌دهد که در صورت تمایل ، **دما را به فارنهایت** و **سرعت باد را به کیلومتر بر ساعت** تبدیل کند.
@@ -29,13 +35,19 @@ This program allows the user to enter the name of a city and receive information
 
 # Provided Information:
 
-- Temperature (in degrees Celsius)
-- Feels like temperature (in degrees Celsius)
-- Humidity (%)
-- Pressure (hPa)
-- Weather condition description (e.g., sunny, rainy, etc.)
-- Wind speed (meters per second)
-- Sunrise and sunset times (in hour format)
+1_City Name
+2_Temperature
+3_Feels Like
+4_Humidity
+5_Pressure
+6_Weather Description
+7_Cloudiness
+8_Wind Speed
+9_Visibility
+10_Sunrise
+11_Sunset
+12_Rain 
+13_Snow
 
 Unit Conversion:
 The program gives the user the option to convert **temperature to Fahrenheit** and **wind speed to kilometers per hour** if desired.
@@ -63,7 +75,11 @@ def get_weather(city_name, api_key):
         weather = data["weather"][0]
         wind = data["wind"]
         sys = data["sys"]
+        clouds = data["clouds"]["all"]
+        visibility = data.get("visibility", "N/A")
         temperature = main["temp"]
+        temp_min = main["temp_min"]
+        temp_max = main["temp_max"]
         feels_like = main["feels_like"]
         humidity = main["humidity"]
         pressure = main["pressure"]
@@ -71,38 +87,42 @@ def get_weather(city_name, api_key):
         wind_speed = wind["speed"]
         sunrise = datetime.fromtimestamp(sys["sunrise"]).strftime('%H:%M:%S')
         sunset = datetime.fromtimestamp(sys["sunset"]).strftime('%H:%M:%S')
+        rain = data.get("rain", {}).get("1h", 0)  # میزان بارش در ۱ ساعت گذشته (میلیمتر)
+        snow = data.get("snow", {}).get("1h", 0)  # میزان بارش برف در ۱ ساعت گذشته (میلیمتر)
 
-        print(f"\nCity: {city_name}")
-        print(f"Temperature: {temperature}°C")
-        print(f"Feels like: {feels_like}°C")
-        print(f"Humidity: {humidity}%")
-        print(f"Pressure: {pressure} hPa")
-        print(f"Weather: {weather_description}")
-        print(f"Wind Speed: {wind_speed} m/s")
-        print(f"Sunrise: {sunrise}")
-        print(f"Sunset: {sunset}")
+        # تبدیل واحدها
+        temp_f = (temperature * 9 / 5) + 32
+        wind_speed_kph = wind_speed * 3.6
 
-        convert_units(temperature, wind_speed)
+        # نمایش نتایج
+        print(f"\n🌍 City: {city_name}")
+        print(f"🌡️ Temperature: {temperature}°C (Min: {temp_min}°C, Max: {temp_max}°C) / {temp_f}°F")
+        print(f"🤒 Feels like: {feels_like}°C")
+        print(f"💧 Humidity: {humidity}%")
+        print(f"📏 Pressure: {pressure} hPa")
+        print(f"🌤️ Weather: {weather_description}")
+        print(f"☁️ Cloudiness: {clouds}%")
+        print(f"💨 Wind Speed: {wind_speed} m/s / {wind_speed_kph} km/h")
+        print(f"👀 Visibility: {visibility} meters")
+        print(f"🌅 Sunrise: {sunrise}")
+        print(f"🌇 Sunset: {sunset}")
+
+        if rain > 0:
+            print(f"🌧️ Rain: {rain} mm in last hour")
+        if snow > 0:
+            print(f"❄️ Snow: {snow} mm in last hour")
     else:
-        print("City not found!")
-
-
-def convert_units(temp_c, wind_speed_mps):
-    choice = input("\nDo you want to convert units? (yes/no): ").strip().lower()
-
-    if choice == "yes":
-        temp_f = (temp_c * 9 / 5) + 32
-        print(f"\nTemperature in Fahrenheit: {temp_f}°F")
-
-        wind_speed_kph = wind_speed_mps * 3.6
-        print(f"Wind Speed in km/h: {wind_speed_kph} km/h")
-    else:
-        print("No unit conversion requested.")
-
+        print("❌ City not found!")
 
 if __name__ == "__main__":
-    city_name = input("Please enter your city name: ")
-    get_weather(city_name, api_key)  
+    while True:
+        city_name = input("\n🔎 Please enter your city name: ").strip()
+        get_weather(city_name, api_key)
+
+        search_again = input("\n🔄 Do you want to search for another city? (yes/no): ").strip().lower()
+        if search_again != "yes":
+            print("👋 Exiting the program. Have a great day!")
+            break
 ```
 # کلون کردن پروژه skywatch 
 
