@@ -34,11 +34,9 @@ def get_weather(city_name, api_key):
         rain = data.get("rain", {}).get("1h", 0)  # میزان بارش در ۱ ساعت گذشته (میلیمتر)
         snow = data.get("snow", {}).get("1h", 0)  # میزان بارش برف در ۱ ساعت گذشته (میلیمتر)
 
-        # تبدیل واحدها
         temp_f = (temperature * 9 / 5) + 32
         wind_speed_kph = wind_speed * 3.6
 
-        # نمایش نتایج
         print(f"\n🌍 City: {city_name}")
         print(f"🌡️ Temperature: {temperature}°C (Min: {temp_min}°C, Max: {temp_max}°C) / {temp_f}°F")
         print(f"🤒 Feels like: {feels_like}°C")
