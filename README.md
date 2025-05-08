@@ -185,10 +185,12 @@ python SkyWatch.main.py
 python skywatch.main.GUI.py
 ```
 
-![Code frequency](https://github.com/user-attachments/assets/92b1eea8-04ea-4e3e-8bfc-f97996f938f8)
+---
 
 # Contributors
 ![Contributors](https://github.com/user-attachments/assets/e45e22ae-3ccf-4f0e-a3f3-9ee94fde193c)
 
+# Code frequency over the history of arshiakia/SkyWatch
+![Code frequency](https://github.com/user-attachments/assets/09e3c421-ee5d-40b9-9fa4-0862b6e26318)
 
 
