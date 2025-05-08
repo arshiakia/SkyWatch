@@ -1,5 +1,4 @@
 # SkyWatch
-![Code frequency](https://github.com/user-attachments/assets/079b84e6-b7df-41d5-9cb5-20d6c3f93695)
 
 # Program Description
 
@@ -185,3 +184,7 @@ python SkyWatch.main.py
 ```
 python skywatch.main.GUI.py
 ```
+
+![Code frequency](https://github.com/user-attachments/assets/92b1eea8-04ea-4e3e-8bfc-f97996f938f8)
+
+
