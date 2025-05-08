@@ -187,4 +187,8 @@ python skywatch.main.GUI.py
 
 ![Code frequency](https://github.com/user-attachments/assets/92b1eea8-04ea-4e3e-8bfc-f97996f938f8)
 
+# Contributors
+![Contributors](https://github.com/user-attachments/assets/e45e22ae-3ccf-4f0e-a3f3-9ee94fde193c)
+
+
 
